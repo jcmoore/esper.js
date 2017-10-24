@@ -10,6 +10,8 @@ function invokeCB(o, name) {
 
 function detectStrict(body) {
 	if ( !body || body.length < 1 ) return;
+	// NOTE(jcmoore): Strict mode only detected in first expression statement
+	// (should it check all string literal "header statements"?)
 	let first = body[0];
 	if ( first.type === 'ExpressionStatement' ) {
 		let exp = first.expression;
