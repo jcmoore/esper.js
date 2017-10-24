@@ -260,7 +260,6 @@ class EsperASTInstructions {
 			} else if ( s.type === 'FunctionDeclaration' ) {
 				a.vars[s.id.name] = s;
 			}
-			// NOTE(jcmoore): hoist 'ClassDeclaration' too(?)
 		}
 
 		if ( a.body.type === 'BlockStatement' ) {
