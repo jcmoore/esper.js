@@ -261,6 +261,7 @@ class EsperASTInstructions {
 				a.vars[s.id.name] = s;
 			}
 		}
+		// NOTE(jcmoore): hoist scanning doesn't appear to be deep/recursive
 
 		if ( a.body.type === 'BlockStatement' ) {
 			for ( let stmt of a.body.body ) prehoist(stmt);
